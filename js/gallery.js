@@ -2,9 +2,10 @@
 function swapMainImage(thumbnail)
 {
     console.log("in Swap Image Function");
-    let sourceBigImage = thumbnail.data-large-version;
+    let sourceBigImage = thumbnail.dataset.largeVersion;
     let mainImage = document.querySelector("#gallery-photo img");
     mainImage.setAttribute("src", sourceBigImage);
+    mainImage.setAttribute("alt", thumbnail.alt);
 
 }
 
